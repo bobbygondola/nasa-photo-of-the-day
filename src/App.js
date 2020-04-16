@@ -46,18 +46,18 @@ function App() {
     </div>
 
     <div className = "Description">
-    <h2>Nasa's Photo of The Day Descritption</h2>
+    <h2>Nasa's Photo of The Day Description</h2>
     {nasaData &&<p>{nasaData.explanation}</p>}
 
     </div>
 
     <div className = "Image">
 
-{nasaData && <img src = {nasaData.hdurl}></img>}
+    {nasaData && <img src = {nasaData.url}></img>}
     </div>
 
-    <div className = "Nav">
-
+    <div className = "Copyright">
+    {nasaData &&<p>Photo by : {nasaData.copyright}</p>}
     </div>
     </div>
     
