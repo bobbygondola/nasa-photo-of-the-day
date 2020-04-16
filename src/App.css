@@ -11,8 +11,15 @@
   width: 0%;
 }
 
-
-
+.Description{
+  margin-left: 5%;
+  width: 30%;
+  background-color: lightgray;
+  padding: 1%;
+}
+.Image{
+  width: 40vw;
+}
 
 
 
