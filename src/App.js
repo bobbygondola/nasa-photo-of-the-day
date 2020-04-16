@@ -42,7 +42,7 @@ function App() {
     </div>
 
     <div className ="ImageTitle">
-    {nasaData &&<p>{nasaData.title}</p>}
+    {nasaData &&<p>"{nasaData.title}"</p>}
     </div>
 
     <div className = "Description">
