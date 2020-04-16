@@ -1,6 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+// import Modal from './Modal.js';
+import { Alert } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
+
 
 // function app(){
   //set your states const [xyz,setxyz] = useState()
@@ -25,6 +31,7 @@ function App() {
     axios.get(url).then((response) => {
       setNasaData(response.data)
       console.log(response.data)
+      
       const data = (response.data)
       console.log(data.title)
     })
@@ -36,13 +43,23 @@ function App() {
     // const data = (response.data)
 
     <div className="App">
+    <Alert color="primary">
+      Due to Covid-19, Updates to Daily Images will only appear by <a href="#">Donating Now</a>
+      </Alert>
+
+      <Breadcrumb className = "bc">
+        <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+        <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+        <BreadcrumbItem active>Data</BreadcrumbItem>
+      </Breadcrumb>
 
     <div className="Title">
     <h1>NASA's Photo of The Day</h1>
     </div>
+    
 
     <div className ="ImageTitle">
-    {nasaData &&<p>"{nasaData.title}"</p>}
+    {nasaData &&<p>"{nasaData.title}"</p>} 
     </div>
 
     <div className = "Description">
